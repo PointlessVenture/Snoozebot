@@ -10,7 +10,7 @@ import time
 true = True
 false = False
 
-TOKEN = "OTM5NjA5NzE0NTI0ODE1NDcy.Yf7VvQ.fecs0AZfzWxuNlhbP5ewtCCIOpw"
+#TOKEN = "Upload Token Here!"
 
 CLIENT = discord.Client()
 
