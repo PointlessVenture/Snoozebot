@@ -23,7 +23,7 @@ def wait_and_remove(timer, user):
 @CLIENT.event
 async def on_ready():
     print(f'{CLIENT.user} has connected to Discord!')
-    await CLIENT.change_presence(activity=discord.Game(name="Use zzzhelp!"))
+    await CLIENT.change_presence(activity=discord.Game(name="Use z!help!"))
 
 @CLIENT.event
 async def on_message(message):
@@ -40,12 +40,12 @@ async def on_message(message):
             command = args[0]
             if command == "help":
                 helpmsg = "Snoozebot Reporting for Duty!\n"
-                helpmsg += "Use zzzSnooze @(somebody) to send me out to check on someone.\n"
+                helpmsg += "Use z!Snooze @(somebody) to send me out to check on someone.\n"
                 helpmsg += "They have 5 minutes to respond to me. If they don't, I send them to the AFK channel.\n"
                 helpmsg += "Whether they respond or not, I only check on someone once every 15 minutes.\n"
                 await message.channel.send(helpmsg)
                 # await message.channel.send("")
-            elif command.lower() == "snooze" or command.lower() == "thisbitchsnoozin":
+            elif command.lower() == "snooze":
                 user = ""
                 mod = ""
                 channel = message.guild.afk_channel
@@ -102,7 +102,7 @@ async def on_message(message):
                         wait_thread.start()
                     # await message.channel.send("")
             else:
-                await message.channel.send("Huh? Did somebody try to get my attention? Use zzzhelp!")
+                await message.channel.send("Huh? Did somebody try to get my attention? Use z!help!")
                 valid = false
     except IndexError:
         pass
